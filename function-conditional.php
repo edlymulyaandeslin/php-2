@@ -17,12 +17,13 @@
     // Hapus komentar untuk menjalankan code!
     function greetings($str)
     {
-        echo 'Halo ' . $str . ', Selamat Datang di Garuda Cyber Institute!';
-        echo '<br/>';
+        return 'Halo ' . $str . ', Selamat Datang di Garuda Cyber Institute!';
     }
-    greetings("Bagas");
-    greetings("Wahyu");
-    greetings("Edly Mulya Andeslin");
+    echo greetings("Edly Mulya Andeslin");
+    echo '<br/>';
+    echo greetings("Bagas");
+    echo '<br/>';
+    echo greetings("Wahyu");
 
     echo "<h3>Soal No 2 Reverse String</h3>";
     /*Soal No 2
@@ -37,7 +38,8 @@
     function reverseString($str)
     {
         $reverse = '';
-        for ($i = strlen($str) - 1; $i >= 0; $i--) {
+        $length = strlen($str) - 1;
+        for ($i = $length; $i >= 0; $i--) {
             $reverse .= $str[$i];
         }
         return $reverse;
